@@ -1,4 +1,4 @@
-﻿interface SectionTitleProps {
+interface SectionTitleProps {
   badge?: string;
   titre: string;
   sousTitre?: string;

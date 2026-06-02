@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { MapPin, Phone, Mail, Heart, ArrowRight } from "lucide-react";
 import LionLogo from "@/components/shared/LionLogo";
 import { PARTI, CANDIDAT, RESEAUX_SOCIAUX } from "@/lib/constants";
@@ -103,7 +103,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 group mb-6">
               <div className="w-12 h-12 bg-vert-principal rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <LionLogo taille={30} couleur="#FFFFFF" />
+                <LionLogo taille={30}  />
               </div>
               <div>
                 <p className="font-heading font-bold text-xl text-white leading-none">{PARTI.nom}</p>

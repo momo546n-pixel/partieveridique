@@ -77,7 +77,6 @@ export default function Navbar() {
             >
               <LionLogo
                 taille={28}
-                couleur={navbarTransparente ? "#FFFFFF" : "#FFFFFF"}
               />
             </div>
 
@@ -199,7 +198,7 @@ export default function Navbar() {
               <div className="bg-gradient-vert p-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <LionLogo taille={24} couleur="#FFFFFF" />
+                    <LionLogo taille={24}  />
                   </div>
                   <div>
                     <p className="font-heading font-bold text-white text-base leading-none">
