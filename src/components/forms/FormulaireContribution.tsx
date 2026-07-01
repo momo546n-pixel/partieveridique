@@ -6,7 +6,7 @@ import { envoyerContribution } from "@/lib/actions";
 
 const QUARTIERS = [
   "Arafat", "Bambilor", "Colobane", "Diokoul", "Keury Souf",
-  "Keury Kaw", "MÃ©dina", "Santhiaba", "ThiawlÃ¨ne", "Autre",
+  "Keury Kaw", "Médina", "Santhiaba", "Thiawlène", "Autre",
 ];
 
 export default function FormulaireContribution() {
@@ -38,7 +38,7 @@ export default function FormulaireContribution() {
           Merci pour votre contribution !
         </h3>
         <p className="text-gris-moyen mb-4">
-          Votre message a Ã©tÃ© transmis Ã  notre Ã©quipe. Nous l'Ã©tudierons avec attention.
+          Votre message a été transmis à notre équipe. Nous l'étudierons avec attention.
         </p>
         <button onClick={() => setStatut("idle")} className="btn-principal">
           Faire une autre contribution
@@ -63,8 +63,8 @@ export default function FormulaireContribution() {
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { valeur: "idee", label: "IdÃ©e" },
-            { valeur: "probleme", label: "ProblÃ¨me" },
+            { valeur: "idee", label: "Idée" },
+            { valeur: "probleme", label: "Problème" },
             { valeur: "suggestion", label: "Suggestion" },
           ].map((type) => (
             <label key={type.valeur}
@@ -88,7 +88,7 @@ export default function FormulaireContribution() {
           <input name="nom" type="text" placeholder="Votre nom" className="champ-input" required />
         </div>
         <div>
-          <label className="block text-sm font-medium text-noir-parti mb-1">TÃ©lÃ©phone *</label>
+          <label className="block text-sm font-medium text-noir-parti mb-1">Téléphone *</label>
           <input name="telephone" type="tel" placeholder="7X XXX XX XX" className="champ-input" required />
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function FormulaireContribution() {
         <div>
           <label className="block text-sm font-medium text-noir-parti mb-1">Quartier</label>
           <select name="quartier" className="champ-input">
-            <option value="">SÃ©lectionnez...</option>
+            <option value="">Sélectionnez...</option>
             {QUARTIERS.map((q) => (
               <option key={q} value={q}>{q}</option>
             ))}
@@ -116,7 +116,7 @@ export default function FormulaireContribution() {
         <textarea
           name="message"
           rows={5}
-          placeholder="DÃ©crivez votre idÃ©e, problÃ¨me ou suggestion..."
+          placeholder="Décrivez votre idée, problème ou suggestion..."
           className="champ-input resize-none"
           required
         />

@@ -41,7 +41,7 @@ const config: Config = {
         "display-xl": ["6rem", { lineHeight: "1", letterSpacing: "-0.03em" }],
       },
 
-      // --- ESPACEMENT PERSONNALISÉ ---
+      // --- ESPACEMENT PERSONNALIS� ---
       spacing: {
         "18": "4.5rem",
         "22": "5.5rem",

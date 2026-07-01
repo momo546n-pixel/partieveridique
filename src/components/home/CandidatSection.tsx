@@ -5,10 +5,10 @@ import { CANDIDAT } from "@/lib/constants";
 
 const ENGAGEMENTS = [
   "Publier les budgets municipaux en ligne chaque trimestre",
-  "Organiser des assemblÃ©es citoyennes dans chaque quartier",
-  "CrÃ©er 500 emplois pour les jeunes de Rufisque Ouest en 3 ans",
-  "RÃ©habiliter les routes et infrastructures dÃ©gradÃ©es",
-  "Mettre en place un systÃ¨me de signalement citoyen numÃ©rique",
+  "Organiser des assemblées citoyennes dans chaque quartier",
+  "Créer 500 emplois pour les jeunes de Rufisque Ouest en 3 ans",
+  "Réhabiliter les routes et infrastructures dégradées",
+  "Mettre en place un système de signalement citoyen numérique",
 ];
 
 export default function CandidatSection() {
@@ -61,15 +61,15 @@ export default function CandidatSection() {
 
             <div className="absolute -bottom-4 -right-4 bg-or text-white rounded-2xl p-4 shadow-or-md">
               <p className="font-heading font-bold text-sm">Rufisque Ouest</p>
-              <p className="text-white/80 text-xs">Notre prioritÃ©</p>
+              <p className="text-white/80 text-xs">Notre priorité</p>
             </div>
           </div>
 
           <div>
             <SectionTitle
               badge="Ses engagements"
-              titre="Des promesses concrÃ¨tes et vÃ©rifiables"
-              sousTitre="Gorgui Ndiaye s'engage sur des actions prÃ©cises, mesurables et transparentes pour les citoyens de Rufisque Ouest."
+              titre="Des promesses concrètes et vérifiables"
+              sousTitre="Gorgui Ndiaye s'engage sur des actions précises, mesurables et transparentes pour les citoyens de Rufisque Ouest."
             />
 
             <ul className="mt-8 space-y-4">
@@ -85,7 +85,7 @@ export default function CandidatSection() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/candidat" className="btn-principal">
-                Biographie complÃ¨te
+                Biographie complète
                 <ArrowRight size={18} />
               </Link>
               <Link href="/priorites" className="btn-secondaire">

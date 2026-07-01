@@ -5,12 +5,12 @@ import FormulaireContribution from "@/components/forms/FormulaireContribution";
 
 export const metadata: Metadata = {
   title: "Parole aux Citoyens",
-  description: "Proposez une idÃ©e, signalez un problÃ¨me ou faites une suggestion pour Rufisque Ouest.",
+  description: "Proposez une idée, signalez un problème ou faites une suggestion pour Rufisque Ouest.",
 };
 
 const TYPES = [
-  { icone: Lightbulb, titre: "IdÃ©e", description: "Proposez une nouvelle idÃ©e pour amÃ©liorer Rufisque Ouest.", couleur: "bg-or-clair", texte: "text-or-hover" },
-  { icone: AlertTriangle, titre: "ProblÃ¨me", description: "Signalez un problÃ¨me dans votre quartier.", couleur: "bg-rouge-clair", texte: "text-rouge" },
+  { icone: Lightbulb, titre: "Idée", description: "Proposez une nouvelle idée pour améliorer Rufisque Ouest.", couleur: "bg-or-clair", texte: "text-or-hover" },
+  { icone: AlertTriangle, titre: "Problème", description: "Signalez un problème dans votre quartier.", couleur: "bg-rouge-clair", texte: "text-rouge" },
   { icone: ThumbsUp, titre: "Suggestion", description: "Faites une suggestion sur notre programme.", couleur: "bg-vert-clair", texte: "text-vert-principal" },
 ];
 
@@ -27,8 +27,8 @@ export default function ParoleAuxCitoyensPage() {
             </h1>
             <div className="w-16 h-1.5 bg-or rounded-full mb-4" />
             <p className="text-white/75 text-lg">
-              Proposez vos idÃ©es, signalez les problÃ¨mes de votre quartier
-              ou faites des suggestions Ã  notre Ã©quipe.
+              Proposez vos idées, signalez les problèmes de votre quartier
+              ou faites des suggestions à notre équipe.
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function ParoleAuxCitoyensPage() {
             <SectionTitle
               badge="Formulaire"
               titre="Exprimez-vous"
-              sousTitre="Votre contribution sera lue et Ã©tudiÃ©e par notre Ã©quipe."
+              sousTitre="Votre contribution sera lue et étudiée par notre équipe."
             />
             <div className="mt-8">
               <FormulaireContribution />

@@ -6,12 +6,12 @@ import { envoyerAdhesion } from "@/lib/actions";
 
 const QUARTIERS = [
   "Arafat", "Bambilor", "Colobane", "Diokoul", "Keury Souf",
-  "Keury Kaw", "MÃ©dina", "Santhiaba", "ThiawlÃ¨ne", "Autre",
+  "Keury Kaw", "Médina", "Santhiaba", "Thiawlène", "Autre",
 ];
 
 const TYPES_PARTICIPATION = [
   { valeur: "militant", label: "Militant actif" },
-  { valeur: "benevole", label: "BÃ©nÃ©vole" },
+  { valeur: "benevole", label: "Bénévole" },
   { valeur: "donateur", label: "Donateur" },
   { valeur: "observateur", label: "Sympathisant observateur" },
 ];
@@ -45,7 +45,7 @@ export default function FormulaireAdhesion() {
           Bienvenue dans le mouvement !
         </h3>
         <p className="text-gris-moyen">
-          Votre adhÃ©sion a Ã©tÃ© enregistrÃ©e. Notre Ã©quipe vous contactera rapidement.
+          Votre adhésion a été enregistrée. Notre équipe vous contactera rapidement.
         </p>
       </div>
     );
@@ -67,14 +67,14 @@ export default function FormulaireAdhesion() {
           <input name="nom" type="text" placeholder="Votre nom" className="champ-input" required />
         </div>
         <div>
-          <label className="block text-sm font-medium text-noir-parti mb-1">PrÃ©nom *</label>
-          <input name="prenom" type="text" placeholder="Votre prÃ©nom" className="champ-input" required />
+          <label className="block text-sm font-medium text-noir-parti mb-1">Prénom *</label>
+          <input name="prenom" type="text" placeholder="Votre prénom" className="champ-input" required />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-noir-parti mb-1">TÃ©lÃ©phone *</label>
+          <label className="block text-sm font-medium text-noir-parti mb-1">Téléphone *</label>
           <input name="telephone" type="tel" placeholder="7X XXX XX XX" className="champ-input" required />
         </div>
         <div>
@@ -87,7 +87,7 @@ export default function FormulaireAdhesion() {
         <div>
           <label className="block text-sm font-medium text-noir-parti mb-1">Quartier *</label>
           <select name="quartier" className="champ-input" required>
-            <option value="">SÃ©lectionnez...</option>
+            <option value="">Sélectionnez...</option>
             {QUARTIERS.map((q) => (
               <option key={q} value={q}>{q}</option>
             ))}
@@ -95,7 +95,7 @@ export default function FormulaireAdhesion() {
         </div>
         <div>
           <label className="block text-sm font-medium text-noir-parti mb-1">Profession</label>
-          <input name="profession" type="text" placeholder="Votre mÃ©tier" className="champ-input" />
+          <input name="profession" type="text" placeholder="Votre métier" className="champ-input" />
         </div>
       </div>
 

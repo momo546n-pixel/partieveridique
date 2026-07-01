@@ -19,8 +19,8 @@ export default function PrioritesSection() {
         <div className="text-center mb-14">
           <SectionTitle
             badge="Notre programme"
-            titre="Nos 5 prioritÃ©s pour Rufisque Ouest"
-            sousTitre="Chaque prioritÃ© est accompagnÃ©e d'objectifs prÃ©cis et d'actions concrÃ¨tes que nous nous engageons Ã  rÃ©aliser."
+            titre="Nos 5 priorités pour Rufisque Ouest"
+            sousTitre="Chaque priorité est accompagnée d'objectifs précis et d'actions concrètes que nous nous engageons à réaliser."
             centre={true}
           />
         </div>

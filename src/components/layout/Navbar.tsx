@@ -14,7 +14,7 @@ export default function Navbar() {
   const [sousMenuOuvert, setSousMenuOuvert] = useState<string | null>(null);
   const pathname = usePathname();
 
-  // DÃ©tection du scroll
+  // Détection du scroll
   useEffect(() => {
     const handleScroll = () => {
       setEstScrolle(window.scrollY > 20);
@@ -47,8 +47,8 @@ export default function Navbar() {
     return pathname.startsWith(href);
   };
 
-  // Sur l'accueil non scrollÃ© â†’ navbar transparente
-  // Sinon â†’ navbar blanche avec ombre
+  // Sur l'accueil non scrollé �  navbar transparente
+  // Sinon �  navbar blanche avec ombre
   const navbarTransparente = estPageAccueil && !estScrolle && !menuOuvert;
 
   return (
@@ -63,7 +63,7 @@ export default function Navbar() {
       >
         <div className="container-parti h-full flex items-center justify-between">
 
-          {/* â”€â”€ LOGO â”€â”€ */}
+          {/* ���� LOGO ���� */}
           <Link
             href="/"
             className="flex items-center gap-3 group"
@@ -99,7 +99,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* â”€â”€ NAVIGATION DESKTOP â”€â”€ */}
+          {/* ���� NAVIGATION DESKTOP ���� */}
           <nav className="hidden lg:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <Link
@@ -133,7 +133,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* â”€â”€ ACTIONS DESKTOP â”€â”€ */}
+          {/* ���� ACTIONS DESKTOP ���� */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/rejoindre"
@@ -149,7 +149,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* â”€â”€ BOUTON HAMBURGER MOBILE â”€â”€ */}
+          {/* ���� BOUTON HAMBURGER MOBILE ���� */}
           <button
             onClick={() => setMenuOuvert(!menuOuvert)}
             className={`lg:hidden p-2 rounded-lg transition-all duration-200
@@ -171,7 +171,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* â”€â”€ MENU MOBILE â”€â”€ */}
+      {/* ���� MENU MOBILE ���� */}
       <AnimatePresence>
         {menuOuvert && (
           <>
@@ -194,7 +194,7 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm
                 bg-white z-50 lg:hidden flex flex-col shadow-2xl"
             >
-              {/* En-tÃªte du menu mobile */}
+              {/* En-tête du menu mobile */}
               <div className="bg-gradient-vert p-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">

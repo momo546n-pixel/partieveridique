@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 
 /**
- * DÃ©tecte si un media query CSS est actif
- * Ex: useMediaQuery("(max-width: 768px)") â†’ true sur mobile
+ * Détecte si un media query CSS est actif
+ * Ex: useMediaQuery("(max-width: 768px)") �  true sur mobile
  */
 export function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);

@@ -6,7 +6,7 @@ const ACTIONS = [
   {
     icone: Users,
     titre: "Rejoindre le mouvement",
-    description: "Devenez militant, bÃ©nÃ©vole ou sympathisant du Parti VÃ©ridique.",
+    description: "Devenez militant, bénévole ou sympathisant du Parti Véridique.",
     href: "/rejoindre",
     label: "S'engager",
     couleur: "bg-vert-clair",
@@ -15,7 +15,7 @@ const ACTIONS = [
   {
     icone: MessageSquare,
     titre: "Parole aux citoyens",
-    description: "Proposez une idÃ©e, signalez un problÃ¨me ou faites une suggestion.",
+    description: "Proposez une idée, signalez un problème ou faites une suggestion.",
     href: "/parole-aux-citoyens",
     label: "Contribuer",
     couleur: "bg-or-clair",
@@ -24,7 +24,7 @@ const ACTIONS = [
   {
     icone: Heart,
     titre: "Nous contacter",
-    description: "Posez vos questions ou prenez contact avec notre Ã©quipe.",
+    description: "Posez vos questions ou prenez contact avec notre équipe.",
     href: "/contact",
     label: "Contacter",
     couleur: "bg-vert-clair",
@@ -90,7 +90,7 @@ export default function AppelSection() {
         <div className="text-center">
           <p className="text-white/60 text-sm mb-4">{PARTI.devise}</p>
           <p className="font-heading font-bold text-white text-xl">
-            {CANDIDAT.nom} â€” {CANDIDAT.fonction}
+            {CANDIDAT.nom} � {CANDIDAT.fonction}
           </p>
         </div>
 

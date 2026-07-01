@@ -5,8 +5,8 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import { PRIORITES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Nos PrioritÃ©s",
-  description: "DÃ©couvrez les 5 prioritÃ©s du Parti VÃ©ridique pour Rufisque Ouest : Transparence, ProximitÃ©, DÃ©veloppement, Emploi des jeunes, SÃ©curitÃ© et SolidaritÃ©.",
+  title: "Nos Priorités",
+  description: "Découvrez les 5 priorités du Parti Véridique pour Rufisque Ouest : Transparence, Proximité, Développement, Emploi des jeunes, Sécurité et Solidarité.",
 };
 
 const ICONES_COMPOSANTS: Record<string, React.ElementType> = {
@@ -33,17 +33,17 @@ export default function PrioritesPage() {
           <span className="badge-or mb-4 inline-block">Notre programme</span>
           <h1 className="font-heading font-black text-white mb-4"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-            Nos 5 PrioritÃ©s
+            Nos 5 Priorités
           </h1>
           <div className="w-16 h-1.5 bg-or rounded-full mx-auto mb-6" />
           <p className="text-white/75 text-xl max-w-2xl mx-auto leading-relaxed">
-            Chaque prioritÃ© est accompagnÃ©e d'objectifs prÃ©cis, d'actions concrÃ¨tes
-            et d'indicateurs de rÃ©ussite que les citoyens pourront vÃ©rifier.
+            Chaque priorité est accompagnée d'objectifs précis, d'actions concrètes
+            et d'indicateurs de réussite que les citoyens pourront vérifier.
           </p>
         </div>
       </section>
 
-      {/* LISTE DES PRIORITÃ‰S */}
+      {/* LISTE DES PRIORIT�0S */}
       <section className="section-padding bg-white">
         <div className="container-parti">
           <div className="space-y-8">
@@ -74,7 +74,7 @@ export default function PrioritesPage() {
                       href={"/priorites/" + priorite.slug}
                       className="btn-principal"
                     >
-                      Voir le dÃ©tail
+                      Voir le détail
                       <ArrowRight size={18} />
                     </Link>
                   </div>
@@ -98,7 +98,7 @@ export default function PrioritesPage() {
                       <div className="border-t border-gris-bordure pt-4">
                         <h3 className="font-heading font-bold text-noir-parti mb-3 flex items-center gap-2">
                           <span className="w-2 h-2 rounded-full bg-or inline-block" />
-                          Actions concrÃ¨tes
+                          Actions concrètes
                         </h3>
                         <ul className="space-y-2">
                           {priorite.actions.map((action, i) => (
@@ -123,15 +123,15 @@ export default function PrioritesPage() {
       <section className="section-padding bg-gradient-vert">
         <div className="container-parti text-center">
           <h2 className="font-heading font-bold text-white text-3xl mb-4">
-            Ce programme, c'est le vÃ´tre
+            Ce programme, c'est le vôtre
           </h2>
           <p className="text-white/75 text-lg mb-8 max-w-xl mx-auto">
-            Contribuez Ã  enrichir notre programme en partageant vos idÃ©es
+            Contribuez à enrichir notre programme en partageant vos idées
             et vos suggestions.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/parole-aux-citoyens" className="btn-or">
-              Proposer une idÃ©e
+              Proposer une idée
               <ArrowRight size={18} />
             </Link>
             <Link href="/rejoindre"

@@ -4,7 +4,7 @@ import SectionTitle from "@/components/shared/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Rejoindre le Mouvement",
-  description: "Rejoignez le Parti VÃ©ridique et soutenez Gorgui Ndiaye.",
+  description: "Rejoignez le Parti Véridique et soutenez Gorgui Ndiaye.",
 };
 
 export default function RejoindrePage() {
@@ -22,7 +22,7 @@ export default function RejoindrePage() {
             </h1>
             <div className="w-16 h-1.5 bg-or rounded-full mb-4" />
             <p className="text-white/75 text-lg">
-              Ensemble pour un Rufisque moderne, prospÃ¨re et solidaire.
+              Ensemble pour un Rufisque moderne, prospère et solidaire.
             </p>
           </div>
         </div>

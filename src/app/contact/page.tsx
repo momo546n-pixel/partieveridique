@@ -6,13 +6,13 @@ import { PARTI } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez le Parti VÃ©ridique.",
+  description: "Contactez le Parti Véridique.",
 };
 
 const INFOS = [
   { icone: MapPin, titre: "Adresse", valeur: PARTI.adresse, detail: "Rufisque Ouest, Dakar" },
-  { icone: Phone, titre: "TÃ©lÃ©phone", valeur: PARTI.telephone, detail: "Lun - Sam, 8h - 18h" },
-  { icone: Mail, titre: "Email", valeur: PARTI.email, detail: "RÃ©ponse sous 24h" },
+  { icone: Phone, titre: "Téléphone", valeur: PARTI.telephone, detail: "Lun - Sam, 8h - 18h" },
+  { icone: Mail, titre: "Email", valeur: PARTI.email, detail: "Réponse sous 24h" },
   { icone: Clock, titre: "Permanences", valeur: "Samedi 9h - 12h", detail: "Dans chaque quartier" },
 ];
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
             <div className="w-16 h-1.5 bg-or rounded-full mb-4" />
             <p className="text-white/75 text-lg">
               Une question, une suggestion ou envie d'en savoir plus ?
-              Notre Ã©quipe est Ã  votre Ã©coute.
+              Notre équipe est à votre écoute.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <SectionTitle badge="CoordonnÃ©es" titre="Nos informations" />
+              <SectionTitle badge="Coordonnées" titre="Nos informations" />
               <div className="mt-6 space-y-4">
                 {INFOS.map((info) => {
                   const Icone = info.icone;
@@ -71,7 +71,7 @@ export default function ContactPage() {
               <div className="mt-8 bg-gradient-vert rounded-2xl p-6 text-white">
                 <h3 className="font-heading font-bold text-lg mb-2">Rejoignez le mouvement</h3>
                 <p className="text-white/75 text-sm mb-4">
-                  Vous souhaitez vous engager activement ? Rejoignez nos Ã©quipes de terrain.
+                  Vous souhaitez vous engager activement ? Rejoignez nos équipes de terrain.
                 </p>
                 <a href="/rejoindre" className="btn-or text-sm">
                   S'engager maintenant

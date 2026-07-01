@@ -6,44 +6,44 @@ import { CANDIDAT, PARTI } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Le Candidat",
-  description: "DÃ©couvrez Gorgui Ndiaye, candidat du Parti VÃ©ridique Ã  la mairie de Rufisque Ouest. Sa biographie, son parcours et ses engagements.",
+  description: "Découvrez Gorgui Ndiaye, candidat du Parti Véridique à la mairie de Rufisque Ouest. Sa biographie, son parcours et ses engagements.",
 };
 
 const ENGAGEMENTS = [
   "Publier les budgets municipaux en ligne chaque trimestre",
-  "Organiser des assemblÃ©es citoyennes trimestrielles dans chaque quartier",
-  "CrÃ©er 500 emplois pour les jeunes de Rufisque Ouest en 3 ans",
-  "RÃ©habiliter les routes et voiries dÃ©gradÃ©es de la commune",
-  "Mettre en place un portail numÃ©rique de suivi des projets municipaux",
-  "CrÃ©er un fonds municipal de solidaritÃ© pour les familles vulnÃ©rables",
-  "Renforcer l'Ã©clairage public dans tous les quartiers",
+  "Organiser des assemblées citoyennes trimestrielles dans chaque quartier",
+  "Créer 500 emplois pour les jeunes de Rufisque Ouest en 3 ans",
+  "Réhabiliter les routes et voiries dégradées de la commune",
+  "Mettre en place un portail numérique de suivi des projets municipaux",
+  "Créer un fonds municipal de solidarité pour les familles vulnérables",
+  "Renforcer l'éclairage public dans tous les quartiers",
   "Ouvrir un centre de formation professionnelle pour les jeunes",
 ];
 
 const PARCOURS = [
   {
     periode: "Aujourd'hui",
-    titre: "Candidat Ã  la Mairie de Rufisque Ouest",
-    lieu: "Rufisque Ouest, SÃ©nÃ©gal",
-    description: "PortÃ© par le Parti VÃ©ridique, engage sa candidature pour transformer Rufisque Ouest.",
+    titre: "Candidat à la Mairie de Rufisque Ouest",
+    lieu: "Rufisque Ouest, Sénégal",
+    description: "Porté par le Parti Véridique, engage sa candidature pour transformer Rufisque Ouest.",
   },
   {
     periode: "2020 - 2024",
     titre: "Engagement citoyen et associatif",
-    lieu: "Rufisque, SÃ©nÃ©gal",
-    description: "Implication dans les associations de quartier et les initiatives de dÃ©veloppement local.",
+    lieu: "Rufisque, Sénégal",
+    description: "Implication dans les associations de quartier et les initiatives de développement local.",
   },
   {
     periode: "2015 - 2020",
-    titre: "ActivitÃ© professionnelle",
+    titre: "Activité professionnelle",
     lieu: "Dakar - Rufisque",
-    description: "DÃ©veloppement d'une expertise dans son domaine professionnel tout en restant ancrÃ© dans sa communautÃ©.",
+    description: "Développement d'une expertise dans son domaine professionnel tout en restant ancré dans sa communauté.",
   },
   {
     periode: "Avant 2015",
-    titre: "Formation et Ã©tudes",
-    lieu: "SÃ©nÃ©gal",
-    description: "Parcours acadÃ©mique qui forge ses convictions et sa vision du dÃ©veloppement.",
+    titre: "Formation et études",
+    lieu: "Sénégal",
+    description: "Parcours académique qui forge ses convictions et sa vision du développement.",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function CandidatPage() {
             <blockquote className="font-heading text-2xl md:text-3xl font-bold text-noir-parti mb-4 leading-snug">
               "{CANDIDAT.messageLeadership}"
             </blockquote>
-            <p className="text-gris-moyen">â€” {CANDIDAT.nom}</p>
+            <p className="text-gris-moyen">� {CANDIDAT.nom}</p>
           </div>
         </div>
       </section>
@@ -120,20 +120,20 @@ export default function CandidatPage() {
               />
               <div className="mt-6 space-y-4 text-gris-moyen leading-relaxed">
                 <p>
-                  Gorgui Ndiaye est un enfant de Rufisque, profondÃ©ment attachÃ© Ã  sa terre
-                  et Ã  sa communautÃ©. ForgÃ© par les rÃ©alitÃ©s du quotidien de ses concitoyens,
+                  Gorgui Ndiaye est un enfant de Rufisque, profondément attaché à sa terre
+                  et à sa communauté. Forgé par les réalités du quotidien de ses concitoyens,
                   il a choisi de s'engager en politique non par ambition personnelle, mais
                   par conviction que le changement est possible.
                 </p>
                 <p>
-                  Son parcours professionnel et associatif lui a donnÃ© une comprÃ©hension
-                  fine des enjeux locaux : l'emploi, l'infrastructure, la sÃ©curitÃ© et
-                  la nÃ©cessitÃ© d'une gouvernance transparente et efficace.
+                  Son parcours professionnel et associatif lui a donné une compréhension
+                  fine des enjeux locaux : l'emploi, l'infrastructure, la sécurité et
+                  la nécessité d'une gouvernance transparente et efficace.
                 </p>
                 <p>
-                  Candidat sous la banniÃ¨re du Parti VÃ©ridique, il incarne une nouvelle
-                  gÃ©nÃ©ration de leaders politiques : proches des citoyens, transparents
-                  dans leurs actions et dÃ©terminÃ©s Ã  produire des rÃ©sultats concrets.
+                  Candidat sous la bannière du Parti Véridique, il incarne une nouvelle
+                  génération de leaders politiques : proches des citoyens, transparents
+                  dans leurs actions et déterminés à produire des résultats concrets.
                 </p>
                 <p className="font-medium text-vert-principal italic">
                   "{CANDIDAT.signature}"
@@ -178,8 +178,8 @@ export default function CandidatPage() {
           <div className="text-center mb-12">
             <SectionTitle
               badge="Ses engagements"
-              titre="Des promesses vÃ©rifiables"
-              sousTitre="Gorgui Ndiaye s'engage sur des actions prÃ©cises et mesurables. Ces engagements seront suivis et Ã©valuÃ©s publiquement."
+              titre="Des promesses vérifiables"
+              sousTitre="Gorgui Ndiaye s'engage sur des actions précises et mesurables. Ces engagements seront suivis et évalués publiquement."
               centre={true}
             />
           </div>

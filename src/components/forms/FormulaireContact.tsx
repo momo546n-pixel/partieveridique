@@ -30,10 +30,10 @@ export default function FormulaireContact() {
       <div className="bg-vert-clair rounded-2xl p-8 text-center">
         <CheckCircle size={48} className="text-vert-principal mx-auto mb-4" />
         <h3 className="font-heading font-bold text-xl text-vert-principal mb-2">
-          Message envoyÃ© !
+          Message envoyé !
         </h3>
         <p className="text-gris-moyen mb-4">
-          Nous avons bien reÃ§u votre message et vous rÃ©pondrons dans les plus brefs dÃ©lais.
+          Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.
         </p>
         <button
           onClick={() => setStatut("idle")}
@@ -70,7 +70,7 @@ export default function FormulaireContact() {
         </div>
         <div>
           <label className="block text-sm font-medium text-noir-parti mb-1">
-            TÃ©lÃ©phone *
+            Téléphone *
           </label>
           <input
             name="telephone"
@@ -126,7 +126,7 @@ export default function FormulaireContact() {
       </button>
 
       <p className="text-xs text-gris-moyen text-center">
-        * Champs obligatoires. Vos donnÃ©es sont protÃ©gÃ©es.
+        * Champs obligatoires. Vos données sont protégées.
       </p>
     </form>
   );

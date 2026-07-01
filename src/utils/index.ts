@@ -1,9 +1,9 @@
 // ============================================
-// UTILITAIRES â€” PARTI VÃ‰RIDIQUE
+// UTILITAIRES � PARTI V�0RIDIQUE
 // ============================================
 
 /**
- * Formate une date en franÃ§ais
+ * Formate une date en français
  * Ex: "15 janvier 2025"
  */
 export function formatDate(dateString: string): string {
@@ -16,7 +16,7 @@ export function formatDate(dateString: string): string {
 }
 
 /**
- * Formate une date courte en franÃ§ais
+ * Formate une date courte en français
  * Ex: "15 jan. 2025"
  */
 export function formatDateCourte(dateString: string): string {
@@ -29,8 +29,8 @@ export function formatDateCourte(dateString: string): string {
 }
 
 /**
- * GÃ©nÃ¨re un slug Ã  partir d'un texte
- * Ex: "Bonjour le Monde" â†’ "bonjour-le-monde"
+ * Génère un slug à partir d'un texte
+ * Ex: "Bonjour le Monde" �  "bonjour-le-monde"
  */
 export function genererSlug(texte: string): string {
   return texte
@@ -44,8 +44,8 @@ export function genererSlug(texte: string): string {
 }
 
 /**
- * Tronque un texte Ã  une longueur donnÃ©e
- * Ex: tronquer("Bonjour le monde", 10) â†’ "Bonjour le..."
+ * Tronque un texte à une longueur donnée
+ * Ex: tronquer("Bonjour le monde", 10) �  "Bonjour le..."
  */
 export function tronquer(texte: string, longueur: number = 150): string {
   if (texte.length <= longueur) return texte;
@@ -53,7 +53,7 @@ export function tronquer(texte: string, longueur: number = 150): string {
 }
 
 /**
- * Capitalise la premiÃ¨re lettre d'un texte
+ * Capitalise la première lettre d'un texte
  */
 export function capitaliser(texte: string): string {
   if (!texte) return "";
@@ -61,8 +61,8 @@ export function capitaliser(texte: string): string {
 }
 
 /**
- * Formate un numÃ©ro de tÃ©lÃ©phone sÃ©nÃ©galais
- * Ex: "771234567" â†’ "77 123 45 67"
+ * Formate un numéro de téléphone sénégalais
+ * Ex: "771234567" �  "77 123 45 67"
  */
 export function formatTelephone(telephone: string): string {
   const nettoye = telephone.replace(/\D/g, "");
@@ -80,7 +80,7 @@ export function estEmailValide(email: string): boolean {
 }
 
 /**
- * Valide un tÃ©lÃ©phone sÃ©nÃ©galais
+ * Valide un téléphone sénégalais
  */
 export function estTelephoneValide(telephone: string): boolean {
   const nettoye = telephone.replace(/\D/g, "");

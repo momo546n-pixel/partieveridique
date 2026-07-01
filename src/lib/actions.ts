@@ -9,7 +9,7 @@ function getSupabaseAdmin() {
   );
 }
 
-// â”€â”€ ACTION CONTACT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ���� ACTION CONTACT ����������������������������������������������������
 
 export async function envoyerMessage(formData: FormData) {
   const nom = formData.get("nom") as string;
@@ -22,11 +22,11 @@ export async function envoyerMessage(formData: FormData) {
   }
 
   if (nom.length < 2) {
-    return { success: false, error: "Le nom doit contenir au moins 2 caractÃ¨res." };
+    return { success: false, error: "Le nom doit contenir au moins 2 caractères." };
   }
 
   if (message.length < 10) {
-    return { success: false, error: "Le message doit contenir au moins 10 caractÃ¨res." };
+    return { success: false, error: "Le message doit contenir au moins 10 caractères." };
   }
 
   const supabase = getSupabaseAdmin();
@@ -36,13 +36,13 @@ export async function envoyerMessage(formData: FormData) {
 
   if (error) {
     console.error("Erreur Supabase:", error);
-    return { success: false, error: "Une erreur est survenue. RÃ©essayez." };
+    return { success: false, error: "Une erreur est survenue. Réessayez." };
   }
 
   return { success: true };
 }
 
-// â”€â”€ ACTION ADHÃ‰SION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ���� ACTION ADH�0SION ����������������������������������������������������
 
 export async function envoyerAdhesion(formData: FormData) {
   const nom = formData.get("nom") as string;
@@ -73,13 +73,13 @@ export async function envoyerAdhesion(formData: FormData) {
 
   if (error) {
     console.error("Erreur Supabase:", error);
-    return { success: false, error: "Une erreur est survenue. RÃ©essayez." };
+    return { success: false, error: "Une erreur est survenue. Réessayez." };
   }
 
   return { success: true };
 }
 
-// â”€â”€ ACTION CONTRIBUTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ���� ACTION CONTRIBUTION ����������������������������������������������������
 
 export async function envoyerContribution(formData: FormData) {
   const type = formData.get("type") as string;
@@ -94,7 +94,7 @@ export async function envoyerContribution(formData: FormData) {
   }
 
   if (message.length < 10) {
-    return { success: false, error: "Votre message doit contenir au moins 10 caractÃ¨res." };
+    return { success: false, error: "Votre message doit contenir au moins 10 caractères." };
   }
 
   const supabase = getSupabaseAdmin();
@@ -112,7 +112,7 @@ export async function envoyerContribution(formData: FormData) {
 
   if (error) {
     console.error("Erreur Supabase:", error);
-    return { success: false, error: "Une erreur est survenue. RÃ©essayez." };
+    return { success: false, error: "Une erreur est survenue. Réessayez." };
   }
 
   return { success: true };

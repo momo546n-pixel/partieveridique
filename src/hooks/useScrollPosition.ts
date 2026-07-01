@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 /**
  * Retourne la position de scroll actuelle
- * UtilisÃ© pour rendre la Navbar opaque au scroll
+ * Utilisé pour rendre la Navbar opaque au scroll
  */
 export function useScrollPosition() {
   const [scrollY, setScrollY] = useState(0);

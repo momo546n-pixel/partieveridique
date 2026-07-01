@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================
-   VARIABLES CSS — PARTI VÉRIDIQUE
+   VARIABLES CSS  PARTI V�RIDIQUE
    ============================================ */
 
 :root {
@@ -79,13 +79,13 @@
     display: block;
   }
 
-  /* Sélection de texte */
+  /* S�lection de texte */
   ::selection {
     background-color: #0B6B3A;
     color: #ffffff;
   }
 
-  /* Scrollbar personnalisée */
+  /* Scrollbar personnalis�e */
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -105,7 +105,7 @@
 }
 
 /* ============================================
-   COMPOSANTS RÉUTILISABLES
+   COMPOSANTS R�UTILISABLES
    ============================================ */
 
 @layer components {
@@ -148,7 +148,7 @@
            focus:ring-vert-principal focus:ring-offset-2;
   }
 
-  /* Bouton doré */
+  /* Bouton dor� */
   .btn-or {
     @apply inline-flex items-center gap-2 px-6 py-3 bg-or text-white
            font-semibold rounded-lg transition-all duration-300
@@ -190,7 +190,7 @@
     @apply text-rouge text-sm mt-1 flex items-center gap-1;
   }
 
-  /* Ligne décorative */
+  /* Ligne d�corative */
   .ligne-decoRative {
     @apply w-16 h-1 bg-or rounded-full;
   }
@@ -200,13 +200,13 @@
     @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent;
   }
 
-  /* Texte dégradé vert */
+  /* Texte d�grad� vert */
   .texte-degrade-vert {
     @apply bg-gradient-to-r from-vert-principal to-vert-secondaire
            bg-clip-text text-transparent;
   }
 
-  /* Texte dégradé or */
+  /* Texte d�grad� or */
   .texte-degrade-or {
     @apply bg-gradient-to-r from-or to-or-hover
            bg-clip-text text-transparent;
@@ -214,7 +214,7 @@
 }
 
 /* ============================================
-   UTILITAIRES PERSONNALISÉS
+   UTILITAIRES PERSONNALIS�S
    ============================================ */
 
 @layer utilities {
@@ -250,7 +250,7 @@
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
-  /* Aspect ratio carré */
+  /* Aspect ratio carr� */
   .aspect-carre {
     @apply aspect-square;
   }

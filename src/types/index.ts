@@ -1,5 +1,5 @@
 // ============================================
-// TYPES GLOBAUX â€” PARTI VÃ‰RIDIQUE
+// TYPES GLOBAUX � PARTI V�0RIDIQUE
 // ============================================
 
 // --- ARTICLE ---
@@ -88,7 +88,7 @@ export type TypeContribution = "idee" | "probleme" | "suggestion";
 
 export type StatutContribution = "nouveau" | "en_cours" | "traite" | "rejete";
 
-// --- PRIORITÃ‰ ---
+// --- PRIORIT�0 ---
 export interface Priorite {
   id: string;
   slug: string;
@@ -134,7 +134,7 @@ export interface FormulaireContribution {
   quartier: string;
 }
 
-// --- RÃ‰PONSE API ---
+// --- R�0PONSE API ---
 export interface ApiResponse<T = void> {
   success: boolean;
   data?: T;
@@ -148,7 +148,7 @@ export interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
-// --- MÃ‰TADONNÃ‰ES SEO ---
+// --- M�0TADONN�0ES SEO ---
 export interface SeoProps {
   title: string;
   description: string;
