@@ -20,17 +20,17 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: `${PARTI.nom} — ${PARTI.devise}`,
+    default: `${PARTI.nom} â€” ${PARTI.devise}`,
     template: `%s | ${PARTI.nom}`,
   },
   description: `Site officiel du ${PARTI.nom}. ${CANDIDAT.messageInstitutionnel} ${CANDIDAT.fonction}.`,
   keywords: [
-    "Parti Véridique",
+    "Parti VÃ©ridique",
     "Gorgui Ndiaye",
     "Rufisque",
     "Rufisque Ouest",
-    "élections municipales",
-    "politique Sénégal",
+    "Ã©lections municipales",
+    "politique SÃ©nÃ©gal",
   ],
   authors: [{ name: PARTI.nom }],
   creator: PARTI.nom,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "fr_SN",
     url: PARTI.siteUrl,
     siteName: PARTI.nom,
-    title: `${PARTI.nom} — ${PARTI.devise}`,
+    title: `${PARTI.nom} â€” ${PARTI.devise}`,
     description: `Site officiel du ${PARTI.nom}. ${CANDIDAT.messageInstitutionnel}`,
   },
   robots: {

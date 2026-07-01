@@ -6,41 +6,41 @@ import { PARTI, CANDIDAT } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Le Parti",
-  description: "Découvrez l'histoire, la vision, la mission et les valeurs du Parti Véridique. Un parti né de la volonté citoyenne pour Rufisque Ouest.",
+  description: "DÃ©couvrez l'histoire, la vision, la mission et les valeurs du Parti VÃ©ridique. Un parti nÃ© de la volontÃ© citoyenne pour Rufisque Ouest.",
 };
 
 const VALEURS_DETAIL = [
   {
     icone: Eye,
     titre: "Transparence",
-    description: "Nous publions toutes nos décisions, nos budgets et nos actions. Le citoyen a le droit de savoir comment son argent est géré et quelles décisions sont prises en son nom.",
+    description: "Nous publions toutes nos dÃ©cisions, nos budgets et nos actions. Le citoyen a le droit de savoir comment son argent est gÃ©rÃ© et quelles dÃ©cisions sont prises en son nom.",
   },
   {
     icone: Users,
-    titre: "Proximité",
-    description: "Nos élus sont sur le terrain, dans les quartiers, à l'écoute. Pas de distance entre les représentants et les représentés — nous sommes vos voisins, vos concitoyens.",
+    titre: "ProximitÃ©",
+    description: "Nos Ã©lus sont sur le terrain, dans les quartiers, Ã  l'Ã©coute. Pas de distance entre les reprÃ©sentants et les reprÃ©sentÃ©s â€” nous sommes vos voisins, vos concitoyens.",
   },
   {
     icone: TrendingUp,
-    titre: "Développement",
-    description: "Nous investissons dans les infrastructures, l'économie locale et les services publics. Rufisque Ouest mérite des équipements modernes et des services de qualité.",
+    titre: "DÃ©veloppement",
+    description: "Nous investissons dans les infrastructures, l'Ã©conomie locale et les services publics. Rufisque Ouest mÃ©rite des Ã©quipements modernes et des services de qualitÃ©.",
   },
   {
     icone: Briefcase,
     titre: "Emploi des Jeunes",
-    description: "La jeunesse est notre priorité absolue. Nous créons les conditions d'une insertion professionnelle durable à travers la formation, l'entrepreneuriat et le partenariat privé.",
+    description: "La jeunesse est notre prioritÃ© absolue. Nous crÃ©ons les conditions d'une insertion professionnelle durable Ã  travers la formation, l'entrepreneuriat et le partenariat privÃ©.",
   },
   {
     icone: Shield,
-    titre: "Sécurité & Solidarité",
-    description: "Un Rufisque sûr et solidaire où chaque citoyen peut vivre dignement. Nous renforçons les dispositifs de sécurité et les mécanismes de solidarité communautaire.",
+    titre: "SÃ©curitÃ© & SolidaritÃ©",
+    description: "Un Rufisque sÃ»r et solidaire oÃ¹ chaque citoyen peut vivre dignement. Nous renforÃ§ons les dispositifs de sÃ©curitÃ© et les mÃ©canismes de solidaritÃ© communautaire.",
   },
 ];
 
 const EQUIPE = [
-  { nom: "Gorgui Ndiaye", role: "Candidat à la Mairie", initiales: "GN" },
-  { nom: "Secrétaire Général", role: "Direction du Parti", initiales: "SG" },
-  { nom: "Trésorier", role: "Gestion Financière", initiales: "TR" },
+  { nom: "Gorgui Ndiaye", role: "Candidat Ã  la Mairie", initiales: "GN" },
+  { nom: "SecrÃ©taire GÃ©nÃ©ral", role: "Direction du Parti", initiales: "SG" },
+  { nom: "TrÃ©sorier", role: "Gestion FinanciÃ¨re", initiales: "TR" },
   { nom: "Coord. Jeunesse", role: "Mobilisation", initiales: "CJ" },
 ];
 
@@ -58,14 +58,14 @@ export default function LePartiPage() {
         />
         <div className="container-parti relative z-10">
           <div className="max-w-2xl">
-            <span className="badge-or mb-4 inline-block">Notre identité</span>
+            <span className="badge-or mb-4 inline-block">Notre identitÃ©</span>
             <h1 className="font-heading font-black text-white mb-4"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-              Le Parti Véridique
+              Le Parti VÃ©ridique
             </h1>
             <div className="w-16 h-1.5 bg-or rounded-full mb-6" />
             <p className="text-white/80 text-xl leading-relaxed">
-              {PARTI.devise} — trois mots qui résument notre raison d'être et
+              {PARTI.devise} â€” trois mots qui rÃ©sument notre raison d'Ãªtre et
               notre engagement envers les citoyens de Rufisque Ouest.
             </p>
           </div>
@@ -79,34 +79,34 @@ export default function LePartiPage() {
             <div>
               <SectionTitle
                 badge="Notre histoire"
-                titre="Un parti né de la nécessité"
+                titre="Un parti nÃ© de la nÃ©cessitÃ©"
               />
               <div className="mt-6 space-y-4 text-gris-moyen leading-relaxed">
                 <p>
-                  Le Parti Véridique est né en 2024 d'un constat simple mais douloureux :
-                  Rufisque Ouest, malgré son potentiel immense, souffre d'une gestion
-                  municipale déconnectée des réalités citoyennes.
+                  Le Parti VÃ©ridique est nÃ© en 2024 d'un constat simple mais douloureux :
+                  Rufisque Ouest, malgrÃ© son potentiel immense, souffre d'une gestion
+                  municipale dÃ©connectÃ©e des rÃ©alitÃ©s citoyennes.
                 </p>
                 <p>
-                  Des hommes et des femmes de bonne volonté, venus de tous les quartiers,
-                  toutes les professions et toutes les générations, ont décidé de se
-                  rassembler autour d'un projet commun : redonner à Rufisque Ouest la
-                  place qu'elle mérite.
+                  Des hommes et des femmes de bonne volontÃ©, venus de tous les quartiers,
+                  toutes les professions et toutes les gÃ©nÃ©rations, ont dÃ©cidÃ© de se
+                  rassembler autour d'un projet commun : redonner Ã  Rufisque Ouest la
+                  place qu'elle mÃ©rite.
                 </p>
                 <p>
-                  Guidés par les valeurs de <strong className="text-vert-principal">Vérité</strong>,
+                  GuidÃ©s par les valeurs de <strong className="text-vert-principal">VÃ©ritÃ©</strong>,
                   de <strong className="text-vert-principal">Justice</strong> et de{" "}
-                  <strong className="text-vert-principal">Progrès</strong>, nous avons
-                  construit un parti ancré dans la réalité locale, tourné vers l'avenir.
+                  <strong className="text-vert-principal">ProgrÃ¨s</strong>, nous avons
+                  construit un parti ancrÃ© dans la rÃ©alitÃ© locale, tournÃ© vers l'avenir.
                 </p>
               </div>
             </div>
             <div className="bg-gris-doux rounded-3xl p-8">
               <div className="space-y-6">
                 {[
-                  { annee: "2024", evenement: "Fondation du Parti Véridique à Rufisque" },
+                  { annee: "2024", evenement: "Fondation du Parti VÃ©ridique Ã  Rufisque" },
                   { annee: "2024", evenement: "Adoption de la charte et des statuts officiels" },
-                  { annee: "2024", evenement: "Désignation de Gorgui Ndiaye comme candidat" },
+                  { annee: "2024", evenement: "DÃ©signation de Gorgui Ndiaye comme candidat" },
                   { annee: "2025", evenement: "Lancement de la campagne de terrain" },
                   { annee: "2026", evenement: "Elections municipales de Rufisque Ouest" },
                 ].map((item, index) => (
@@ -140,10 +140,10 @@ export default function LePartiPage() {
               </h2>
               <div className="w-10 h-1 bg-or rounded-full mb-4" />
               <p className="text-gris-moyen leading-relaxed">
-                Faire de Rufisque Ouest une commune modèle de bonne gouvernance locale
-                au Sénégal — une commune où les citoyens sont au centre de toutes les
-                décisions, où les ressources publiques sont gérées avec rigueur et
-                transparence, et où chaque habitant peut s'épanouir pleinement.
+                Faire de Rufisque Ouest une commune modÃ¨le de bonne gouvernance locale
+                au SÃ©nÃ©gal â€” une commune oÃ¹ les citoyens sont au centre de toutes les
+                dÃ©cisions, oÃ¹ les ressources publiques sont gÃ©rÃ©es avec rigueur et
+                transparence, et oÃ¹ chaque habitant peut s'Ã©panouir pleinement.
               </p>
             </div>
             <div className="bg-gradient-vert rounded-3xl p-8">
@@ -157,9 +157,9 @@ export default function LePartiPage() {
               <div className="w-10 h-1 bg-or rounded-full mb-4" />
               <p className="text-white/80 leading-relaxed">
                 Mobiliser, former et organiser les citoyens de Rufisque Ouest pour
-                une participation active à la vie politique locale. Proposer des
-                solutions concrètes aux problèmes quotidiens et exercer le pouvoir
-                municipal dans la transparence, l'efficacité et la proximité.
+                une participation active Ã  la vie politique locale. Proposer des
+                solutions concrÃ¨tes aux problÃ¨mes quotidiens et exercer le pouvoir
+                municipal dans la transparence, l'efficacitÃ© et la proximitÃ©.
               </p>
             </div>
           </div>
@@ -172,8 +172,8 @@ export default function LePartiPage() {
           <div className="text-center mb-14">
             <SectionTitle
               badge="Nos valeurs"
-              titre="Les 5 piliers du Parti Véridique"
-              sousTitre="Ces valeurs ne sont pas de simples mots — elles guident chacune de nos actions et chacun de nos engagements."
+              titre="Les 5 piliers du Parti VÃ©ridique"
+              sousTitre="Ces valeurs ne sont pas de simples mots â€” elles guident chacune de nos actions et chacun de nos engagements."
               centre={true}
             />
           </div>
@@ -203,7 +203,7 @@ export default function LePartiPage() {
         <div className="container-parti">
           <div className="text-center mb-14">
             <SectionTitle
-              badge="Notre équipe"
+              badge="Notre Ã©quipe"
               titre="Le leadership du Parti"
               centre={true}
             />

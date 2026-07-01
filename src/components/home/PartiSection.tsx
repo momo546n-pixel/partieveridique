@@ -4,10 +4,10 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import { PARTI } from "@/lib/constants";
 
 const CHIFFRES = [
-  { valeur: "2024", label: "Année de fondation", icone: Calendar },
+  { valeur: "2024", label: "AnnÃ©e de fondation", icone: Calendar },
   { valeur: "5", label: "Valeurs fondatrices", icone: Target },
-  { valeur: "12+", label: "Quartiers mobilisés", icone: MapPin },
-  { valeur: "500+", label: "Militants engagés", icone: Users },
+  { valeur: "12+", label: "Quartiers mobilisÃ©s", icone: MapPin },
+  { valeur: "500+", label: "Militants engagÃ©s", icone: Users },
 ];
 
 const VALEURS = [
@@ -19,14 +19,14 @@ const VALEURS = [
     numero: "01",
   },
   {
-    titre: "Proximité",
-    description: "Des élus accessibles, présents sur le terrain, à l'écoute de chaque quartier.",
+    titre: "ProximitÃ©",
+    description: "Des Ã©lus accessibles, prÃ©sents sur le terrain, Ã  l'Ã©coute de chaque quartier.",
     couleur: "bg-or-clair",
     texte: "text-or-hover",
     numero: "02",
   },
   {
-    titre: "Développement",
+    titre: "DÃ©veloppement",
     description: "Des projets concrets pour moderniser les infrastructures de Rufisque Ouest.",
     couleur: "bg-vert-clair",
     texte: "text-vert-secondaire",
@@ -34,14 +34,14 @@ const VALEURS = [
   },
   {
     titre: "Emploi des Jeunes",
-    description: "Créer les conditions d'une insertion professionnelle durable pour notre jeunesse.",
+    description: "CrÃ©er les conditions d'une insertion professionnelle durable pour notre jeunesse.",
     couleur: "bg-or-clair",
     texte: "text-or-hover",
     numero: "04",
   },
   {
-    titre: "Sécurité & Solidarité",
-    description: "Un Rufisque sûr où chaque citoyen est protégé et soutenu par sa communauté.",
+    titre: "SÃ©curitÃ© & SolidaritÃ©",
+    description: "Un Rufisque sÃ»r oÃ¹ chaque citoyen est protÃ©gÃ© et soutenu par sa communautÃ©.",
     couleur: "bg-vert-clair",
     texte: "text-vert-secondaire",
     numero: "05",
@@ -57,27 +57,27 @@ export default function PartiSection() {
 
           <div>
             <SectionTitle
-              badge="Le Parti Véridique"
-              titre="Un parti né de la volonté du peuple"
-              sousTitre="Le Parti Véridique est né d'une conviction profonde : Rufisque mérite mieux. Mieux en termes de gouvernance, de développement et de justice sociale."
+              badge="Le Parti VÃ©ridique"
+              titre="Un parti nÃ© de la volontÃ© du peuple"
+              sousTitre="Le Parti VÃ©ridique est nÃ© d'une conviction profonde : Rufisque mÃ©rite mieux. Mieux en termes de gouvernance, de dÃ©veloppement et de justice sociale."
             />
             <div className="mt-8 space-y-4">
               <p className="text-gris-moyen leading-relaxed">
-                Fondé sur les principes de <strong className="text-vert-principal">Vérité</strong>,{" "}
+                FondÃ© sur les principes de <strong className="text-vert-principal">VÃ©ritÃ©</strong>,{" "}
                 <strong className="text-vert-principal">Justice</strong> et{" "}
-                <strong className="text-vert-principal">Progrès</strong>, notre parti rassemble
-                des citoyens engagés, déterminés à transformer Rufisque Ouest en un modèle
+                <strong className="text-vert-principal">ProgrÃ¨s</strong>, notre parti rassemble
+                des citoyens engagÃ©s, dÃ©terminÃ©s Ã  transformer Rufisque Ouest en un modÃ¨le
                 de bonne gouvernance locale.
               </p>
               <p className="text-gris-moyen leading-relaxed">
-                Nous croyons que le changement commence par la base — par des élus proches
-                des citoyens, transparents dans leur gestion et déterminés à agir pour
-                l'intérêt général.
+                Nous croyons que le changement commence par la base â€” par des Ã©lus proches
+                des citoyens, transparents dans leur gestion et dÃ©terminÃ©s Ã  agir pour
+                l'intÃ©rÃªt gÃ©nÃ©ral.
               </p>
             </div>
             <div className="mt-8">
               <Link href="/le-parti" className="btn-principal">
-                Découvrir notre histoire
+                DÃ©couvrir notre histoire
                 <ArrowRight size={18} />
               </Link>
             </div>

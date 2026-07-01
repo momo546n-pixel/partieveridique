@@ -26,7 +26,7 @@ export default function Hero() {
               style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
               <div className="w-2 h-2 rounded-full bg-or" />
               <span className="text-white text-sm font-medium">
-                Candidat officiel — Mairie de Rufisque Ouest
+                Candidat officiel â€” Mairie de Rufisque Ouest
               </span>
             </div>
 

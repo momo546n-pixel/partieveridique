@@ -1,28 +1,28 @@
 // ============================================
-// CONSTANTES — PARTI VÉRIDIQUE
+// CONSTANTES â€” PARTI VÃ‰RIDIQUE
 // ============================================
 
-// --- IDENTITÉ DU PARTI ---
+// --- IDENTITÃ‰ DU PARTI ---
 export const PARTI = {
-  nom: "Parti Véridique",
-  devise: "Vérité • Justice • Progrès",
+  nom: "Parti VÃ©ridique",
+  devise: "VÃ©ritÃ© â€¢ Justice â€¢ ProgrÃ¨s",
   symbole: "Lion",
   siteUrl: "https://partieveridique.sn",
   email: "contact@partieveridique.sn",
   telephone: "+221 XX XXX XX XX",
-  adresse: "Rufisque, Dakar, Sénégal",
+  adresse: "Rufisque, Dakar, SÃ©nÃ©gal",
 } as const;
 
 // --- CANDIDAT ---
 export const CANDIDAT = {
   nom: "Gorgui Ndiaye",
   nomComplet: "Gorgui Ndiaye",
-  fonction: "Candidat à la mairie de Rufisque Ouest",
+  fonction: "Candidat Ã  la mairie de Rufisque Ouest",
   slogan: "Pour une gestion transparente et efficace",
-  signature: "Rufisque, notre fierté, notre avenir",
-  messageLeadership: "On ne naît pas leader, on le devient.",
+  signature: "Rufisque, notre fiertÃ©, notre avenir",
+  messageLeadership: "On ne naÃ®t pas leader, on le devient.",
   messageInstitutionnel:
-    "Ensemble pour un Rufisque moderne, prospère et solidaire.",
+    "Ensemble pour un Rufisque moderne, prospÃ¨re et solidaire.",
 } as const;
 
 // --- COULEURS OFFICIELLES ---
@@ -40,70 +40,70 @@ export const NAV_ITEMS = [
   { label: "Accueil", href: "/" },
   { label: "Le Parti", href: "/le-parti" },
   { label: "Le Candidat", href: "/candidat" },
-  { label: "Nos Priorités", href: "/priorites" },
-  { label: "Actualités", href: "/actualites" },
+  { label: "Nos PrioritÃ©s", href: "/priorites" },
+  { label: "ActualitÃ©s", href: "/actualites" },
   { label: "Galerie", href: "/galerie" },
   { label: "Parole aux Citoyens", href: "/parole-aux-citoyens" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
-// --- PRIORITÉS DU PARTI ---
+// --- PRIORITÃ‰S DU PARTI ---
 export const PRIORITES = [
   {
     id: "transparence",
     slug: "transparence",
     titre: "Transparence",
     description:
-      "Une gestion publique ouverte, honnête et redevable devant les citoyens.",
+      "Une gestion publique ouverte, honnÃªte et redevable devant les citoyens.",
     icone: "Eye",
     couleur: "#0B6B3A",
     objectifs: [
       "Publier les budgets municipaux en ligne",
-      "Organiser des assemblées citoyennes trimestrielles",
-      "Créer un portail de suivi des projets publics",
+      "Organiser des assemblÃ©es citoyennes trimestrielles",
+      "CrÃ©er un portail de suivi des projets publics",
     ],
     actions: [
-      "Mise en place d'un tableau de bord public des dépenses",
-      "Rapports mensuels d'activité accessibles à tous",
-      "Ligne directe citoyens-élus",
+      "Mise en place d'un tableau de bord public des dÃ©penses",
+      "Rapports mensuels d'activitÃ© accessibles Ã  tous",
+      "Ligne directe citoyens-Ã©lus",
     ],
   },
   {
     id: "proximite",
     slug: "proximite",
-    titre: "Proximité",
+    titre: "ProximitÃ©",
     description:
-      "Des élus accessibles et à l'écoute de chaque quartier de Rufisque Ouest.",
+      "Des Ã©lus accessibles et Ã  l'Ã©coute de chaque quartier de Rufisque Ouest.",
     icone: "Users",
     couleur: "#0B6B3A",
     objectifs: [
       "Permanences hebdomadaires dans chaque quartier",
       "Application mobile de signalement citoyen",
-      "Réponse garantie sous 72h à chaque sollicitation",
+      "RÃ©ponse garantie sous 72h Ã  chaque sollicitation",
     ],
     actions: [
-      "Création de 5 antennes de proximité",
+      "CrÃ©ation de 5 antennes de proximitÃ©",
       "Programme de visites de terrain mensuelles",
-      "Plateforme numérique de dialogue citoyen",
+      "Plateforme numÃ©rique de dialogue citoyen",
     ],
   },
   {
     id: "developpement",
     slug: "developpement",
-    titre: "Développement",
+    titre: "DÃ©veloppement",
     description:
-      "Des infrastructures modernes pour un Rufisque prospère et attractif.",
+      "Des infrastructures modernes pour un Rufisque prospÃ¨re et attractif.",
     icone: "TrendingUp",
     couleur: "#0B6B3A",
     objectifs: [
-      "Réhabilitation des routes et voiries",
-      "Modernisation des marchés locaux",
-      "Développement des équipements sportifs et culturels",
+      "RÃ©habilitation des routes et voiries",
+      "Modernisation des marchÃ©s locaux",
+      "DÃ©veloppement des Ã©quipements sportifs et culturels",
     ],
     actions: [
       "Plan quinquennal d'infrastructures",
-      "Partenariats avec l'État et les bailleurs internationaux",
-      "Zones d'activités économiques dédiées",
+      "Partenariats avec l'Ã‰tat et les bailleurs internationaux",
+      "Zones d'activitÃ©s Ã©conomiques dÃ©diÃ©es",
     ],
   },
   {
@@ -111,42 +111,42 @@ export const PRIORITES = [
     slug: "emploi-jeunes",
     titre: "Emploi des Jeunes",
     description:
-      "Créer les conditions d'une insertion professionnelle durable pour la jeunesse.",
+      "CrÃ©er les conditions d'une insertion professionnelle durable pour la jeunesse.",
     icone: "Briefcase",
     couleur: "#0B6B3A",
     objectifs: [
-      "500 emplois créés en 3 ans",
+      "500 emplois crÃ©Ã©s en 3 ans",
       "Centre de formation professionnelle",
-      "Fonds d'appui à l'entrepreneuriat jeune",
+      "Fonds d'appui Ã  l'entrepreneuriat jeune",
     ],
     actions: [
       "Programme de stage en entreprise",
       "Incubateur de startups locales",
-      "Micro-crédits pour les jeunes entrepreneurs",
+      "Micro-crÃ©dits pour les jeunes entrepreneurs",
     ],
   },
   {
     id: "securite-solidarite",
     slug: "securite-solidarite",
-    titre: "Sécurité & Solidarité",
+    titre: "SÃ©curitÃ© & SolidaritÃ©",
     description:
-      "Un Rufisque sûr où chaque citoyen est protégé et soutenu.",
+      "Un Rufisque sÃ»r oÃ¹ chaque citoyen est protÃ©gÃ© et soutenu.",
     icone: "Shield",
     couleur: "#0B6B3A",
     objectifs: [
-      "Renforcement de l'éclairage public",
-      "Programme d'aide aux familles vulnérables",
-      "Système de surveillance des espaces publics",
+      "Renforcement de l'Ã©clairage public",
+      "Programme d'aide aux familles vulnÃ©rables",
+      "SystÃ¨me de surveillance des espaces publics",
     ],
     actions: [
-      "Comités de veille citoyenne dans chaque quartier",
-      "Fonds municipal de solidarité",
-      "Partenariat renforcé avec les forces de sécurité",
+      "ComitÃ©s de veille citoyenne dans chaque quartier",
+      "Fonds municipal de solidaritÃ©",
+      "Partenariat renforcÃ© avec les forces de sÃ©curitÃ©",
     ],
   },
 ] as const;
 
-// --- RÉSEAUX SOCIAUX ---
+// --- RÃ‰SEAUX SOCIAUX ---
 export const RESEAUX_SOCIAUX = {
   facebook: "https://facebook.com/partieveridique",
   twitter: "https://twitter.com/partieveridique",
