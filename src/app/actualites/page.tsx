@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, ArrowRight, Tag } from "lucide-react";
-import SectionTitle from "@/components/shared/SectionTitle";
+import Pagination from "@/components/shared/Pagination";
 import { supabase } from "@/lib/supabase";
 import { formatDate } from "@/utils";
+import { ARTICLES_PAR_PAGE } from "@/lib/constants";
+import type { CategorieArticle } from "@/types";
 
 export const metadata: Metadata = {
   title: "Actualites",
@@ -12,18 +14,8 @@ export const metadata: Metadata = {
 
 export const revalidate = 60;
 
-async function getArticles() {
-  const { data, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("publie", true)
-    .order("created_at", { ascending: false });
-
-  if (error) {
-    console.error("Erreur chargement articles:", error);
-    return [];
-  }
-  return data || [];
+interface Props {
+  searchParams: Promise<{ categorie?: string; page?: string }>;
 }
 
 const LABELS_CATEGORIES: Record<string, string> = {
@@ -40,8 +32,56 @@ const COULEURS_CATEGORIES: Record<string, string> = {
   discours: "bg-purple-100 text-purple-700 badge",
 };
 
-export default async function ActualitesPage() {
-  const articles = await getArticles();
+const CATEGORIES: { valeur: CategorieArticle | ""; label: string }[] = [
+  { valeur: "", label: "Toutes" },
+  { valeur: "actualite", label: "Actualite" },
+  { valeur: "communique", label: "Communique" },
+  { valeur: "evenement", label: "Evenement" },
+  { valeur: "discours", label: "Discours" },
+];
+
+function construireLien(categorie: string | undefined, page: number) {
+  const params = new URLSearchParams();
+  if (categorie) params.set("categorie", categorie);
+  if (page > 1) params.set("page", String(page));
+  const qs = params.toString();
+  return "/actualites" + (qs ? `?${qs}` : "");
+}
+
+async function getArticles(categorie: string | undefined, page: number) {
+  const debut = (page - 1) * ARTICLES_PAR_PAGE;
+  const fin = debut + ARTICLES_PAR_PAGE - 1;
+
+  let requete = supabase
+    .from("articles")
+    .select("*", { count: "exact" })
+    .eq("publie", true)
+    .order("created_at", { ascending: false });
+
+  if (categorie) {
+    requete = requete.eq("categorie", categorie);
+  }
+
+  const { data, count, error } = await requete.range(debut, fin);
+
+  if (error) {
+    console.error("Erreur chargement articles:", error);
+    return { articles: [], total: 0 };
+  }
+
+  return { articles: data || [], total: count || 0 };
+}
+
+export default async function ActualitesPage({ searchParams }: Props) {
+  const { categorie, page: pageParam } = await searchParams;
+  const page = Math.max(1, parseInt(pageParam || "1", 10) || 1);
+
+  const { articles, total } = await getArticles(categorie, page);
+  const totalPages = Math.max(1, Math.ceil(total / ARTICLES_PAR_PAGE));
+
+  const afficherVedette = page === 1 && !categorie && articles.length > 0;
+  const articleVedette = afficherVedette ? articles[0] : null;
+  const articlesGrille = afficherVedette ? articles.slice(1) : articles;
 
   return (
     <main className="pt-navbar">
@@ -68,6 +108,26 @@ export default async function ActualitesPage() {
       <section className="section-padding bg-gris-doux">
         <div className="container-parti">
 
+          <div className="flex flex-wrap gap-2 mb-10">
+            {CATEGORIES.map((cat) => {
+              const actif = cat.valeur === (categorie || "");
+              return (
+                <Link
+                  key={cat.valeur || "toutes"}
+                  href={construireLien(cat.valeur || undefined, 1)}
+                  className={
+                    "px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 " +
+                    (actif
+                      ? "bg-vert-principal text-white"
+                      : "bg-white text-noir-parti border border-gris-bordure hover:border-vert-principal")
+                  }
+                >
+                  {cat.label}
+                </Link>
+              );
+            })}
+          </div>
+
           {articles.length === 0 ? (
             <div className="text-center py-20">
               <div className="w-16 h-16 bg-gris-bordure rounded-full flex items-center justify-center mx-auto mb-4">
@@ -77,32 +137,34 @@ export default async function ActualitesPage() {
                 Aucun article disponible
               </h3>
               <p className="text-gris-moyen">
-                Les articles seront publies prochainement.
+                {categorie
+                  ? "Aucun article ne correspond a cette categorie pour le moment."
+                  : "Les articles seront publies prochainement."}
               </p>
             </div>
           ) : (
             <>
               {/* Article en vedette */}
-              {articles[0] && (
+              {articleVedette && (
                 <div className="carte p-0 overflow-hidden mb-8">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="bg-gradient-vert p-10 flex flex-col justify-center min-h-64">
-                      <span className={COULEURS_CATEGORIES[articles[0].categorie] || "badge-vert"}>
-                        {LABELS_CATEGORIES[articles[0].categorie] || articles[0].categorie}
+                      <span className={COULEURS_CATEGORIES[articleVedette.categorie] || "badge-vert"}>
+                        {LABELS_CATEGORIES[articleVedette.categorie] || articleVedette.categorie}
                       </span>
                       <h2 className="font-heading font-bold text-white text-2xl md:text-3xl mt-3 mb-4 leading-snug">
-                        {articles[0].titre}
+                        {articleVedette.titre}
                       </h2>
                       <p className="text-white/70 text-sm mb-6 leading-relaxed">
-                        {articles[0].resume || articles[0].contenu.slice(0, 150) + "..."}
+                        {articleVedette.resume || articleVedette.contenu.slice(0, 150) + "..."}
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-white/60 text-xs">
                           <Calendar size={14} />
-                          <span>{formatDate(articles[0].created_at)}</span>
+                          <span>{formatDate(articleVedette.created_at)}</span>
                         </div>
                         <Link
-                          href={"/actualites/" + articles[0].slug}
+                          href={"/actualites/" + articleVedette.slug}
                           className="inline-flex items-center gap-2 px-4 py-2 bg-or text-white text-sm font-semibold rounded-lg hover:bg-or-hover transition-all duration-300"
                         >
                           Lire
@@ -123,10 +185,10 @@ export default async function ActualitesPage() {
                 </div>
               )}
 
-              {/* Grille des autres articles */}
-              {articles.length > 1 && (
+              {/* Grille des articles */}
+              {articlesGrille.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {articles.slice(1).map((article) => (
+                  {articlesGrille.map((article) => (
                     <div key={article.id} className="carte p-6 flex flex-col">
                       <div className="flex items-center justify-between mb-3">
                         <span className={COULEURS_CATEGORIES[article.categorie] || "badge-vert"}>
@@ -154,6 +216,12 @@ export default async function ActualitesPage() {
                   ))}
                 </div>
               )}
+
+              <Pagination
+                pageActuelle={page}
+                totalPages={totalPages}
+                construireLien={(p) => construireLien(categorie, p)}
+              />
             </>
           )}
         </div>

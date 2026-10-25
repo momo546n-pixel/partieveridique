@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Heart, ArrowRight } from "lucide-react";
-import LionLogo from "@/components/shared/LionLogo";
 import { PARTI, CANDIDAT, RESEAUX_SOCIAUX } from "@/lib/constants";
 
 function IconeFacebook() {
@@ -71,48 +71,75 @@ const COLONNES_NAVIGATION = [
   },
 ];
 
-const RESEAUX = [
-  { nom: "Facebook", href: RESEAUX_SOCIAUX.facebook, Icone: IconeFacebook, couleur: "hover:bg-blue-600" },
-  { nom: "Twitter", href: RESEAUX_SOCIAUX.twitter, Icone: IconeTwitter, couleur: "hover:bg-sky-500" },
-  { nom: "Instagram", href: RESEAUX_SOCIAUX.instagram, Icone: IconeInstagram, couleur: "hover:bg-pink-600" },
-  { nom: "YouTube", href: RESEAUX_SOCIAUX.youtube, Icone: IconeYoutube, couleur: "hover:bg-red-600" },
-];
 
-const VALEURS = ["Transparence", "Proximite", "Developpement", "Emploi des jeunes", "Securite et Solidarite"];
+
+const VALEURS = [
+  "Transparence",
+  "Proximite",
+  "Developpement",
+  "Emploi des jeunes",
+  "Securite et Solidarite",
+];
 
 export default function Footer() {
   const annee = new Date().getFullYear();
+
   return (
     <footer className="bg-gradient-sombre text-white">
+
+      {/* BANDE SUPERIEURE */}
       <div className="border-b border-white/10">
         <div className="container-parti py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <p className="text-or font-heading font-semibold text-lg">{CANDIDAT.slogan}</p>
-              <p className="text-white/60 text-sm mt-1">-- {CANDIDAT.nom}, {CANDIDAT.fonction}</p>
+              <p className="text-or font-heading font-semibold text-lg">
+                {CANDIDAT.slogan}
+              </p>
+              <p className="text-white/60 text-sm mt-1">
+                -- {CANDIDAT.nom}, {CANDIDAT.fonction}
+              </p>
             </div>
-            <Link href="/rejoindre" className="inline-flex items-center gap-2 px-6 py-3 bg-vert-principal text-white font-semibold rounded-lg hover:bg-vert-hover transition-all duration-300 active:scale-95 shrink-0">
+            <Link
+              href="/rejoindre"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-vert-principal text-white font-semibold rounded-lg hover:bg-vert-hover transition-all duration-300 active:scale-95 shrink-0"
+            >
               Rejoindre le mouvement
               <ArrowRight size={18} />
             </Link>
           </div>
         </div>
       </div>
+
+      {/* CONTENU PRINCIPAL */}
       <div className="container-parti py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+          {/* COLONNE IDENTITE */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 group mb-6">
-              <div className="w-12 h-12 bg-vert-principal rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <LionLogo taille={30}  />
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-white shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo Parti Veridique"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
-                <p className="font-heading font-bold text-xl text-white leading-none">{PARTI.nom}</p>
+                <p className="font-heading font-bold text-xl text-white leading-none">
+                  {PARTI.nom}
+                </p>
                 <p className="text-or text-sm mt-0.5">{PARTI.devise}</p>
               </div>
             </Link>
+
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              {CANDIDAT.messageInstitutionnel} Sous la direction de <span className="text-white/90 font-medium">{CANDIDAT.nom}</span>, nous batissons ensemble l avenir de Rufisque Ouest.
+              {CANDIDAT.messageInstitutionnel} Sous la direction de{" "}
+              <span className="text-white/90 font-medium">{CANDIDAT.nom}</span>,
+              nous batissons ensemble l avenir de Rufisque Ouest.
             </p>
+
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-or shrink-0 mt-0.5" />
@@ -127,21 +154,37 @@ export default function Footer() {
                 <span className="text-white/60 text-sm">{PARTI.email}</span>
               </li>
             </ul>
+
             <div className="flex items-center gap-2">
-              {RESEAUX.map((reseau) => (
-                <a key={reseau.nom} href={reseau.href} target="_blank" rel="noopener noreferrer" aria-label={reseau.nom} className={"w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center transition-all duration-200 hover:scale-110 " + reseau.couleur}>
-                  <reseau.Icone />
+              <a href={RESEAUX_SOCIAUX.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center transition-all duration-200 hover:bg-blue-600 hover:scale-110">
+                 <IconeFacebook />
+              </a>
+              <a href={RESEAUX_SOCIAUX.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center transition-all duration-200 hover:bg-sky-500 hover:scale-110">
+                 <IconeTwitter />
+              </a>
+              <a href={RESEAUX_SOCIAUX.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center transition-all duration-200 hover:bg-pink-600 hover:scale-110">
+                <IconeInstagram />
+              </a>
+              <a href={RESEAUX_SOCIAUX.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center transition-all duration-200 hover:bg-red-600 hover:scale-110">
+                 <IconeYoutube />
                 </a>
-              ))}
+              </div>
+          
             </div>
-          </div>
+
+          {/* COLONNES NAVIGATION */}
           {COLONNES_NAVIGATION.map((colonne) => (
             <div key={colonne.titre}>
-              <h3 className="font-heading font-bold text-white text-base mb-4 pb-2 border-b border-white/10">{colonne.titre}</h3>
+              <h3 className="font-heading font-bold text-white text-base mb-4 pb-2 border-b border-white/10">
+                {colonne.titre}
+              </h3>
               <ul className="space-y-2.5">
                 {colonne.liens.map((lien) => (
                   <li key={lien.href}>
-                    <Link href={lien.href} className="text-white/55 text-sm hover:text-white transition-colors duration-200 flex items-center gap-1.5 group">
+                    <Link
+                      href={lien.href}
+                      className="text-white/55 text-sm hover:text-white transition-colors duration-200 flex items-center gap-1.5 group"
+                    >
                       <span className="w-0 group-hover:w-3 overflow-hidden transition-all duration-200">
                         <ArrowRight size={12} className="text-or" />
                       </span>
@@ -154,6 +197,8 @@ export default function Footer() {
           ))}
         </div>
       </div>
+
+      {/* VALEURS */}
       <div className="border-t border-white/10">
         <div className="container-parti py-6">
           <div className="flex flex-wrap items-center justify-center gap-6">
@@ -166,20 +211,39 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* COPYRIGHT */}
       <div className="border-t border-white/10 bg-black/20">
         <div className="container-parti py-4">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-white/40 text-xs">Copyright {annee} {PARTI.nom}. Tous droits reserves.</p>
+            <p className="text-white/40 text-xs">
+              Copyright {annee} {PARTI.nom}. Tous droits reserves.
+            </p>
             <div className="flex items-center gap-4">
-              <Link href="/mentions-legales" className="text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Mentions legales</Link>
+              <Link
+                href="/mentions-legales"
+                className="text-white/40 text-xs hover:text-white/70 transition-colors duration-200"
+              >
+                Mentions legales
+              </Link>
               <span className="text-white/20">.</span>
-              <Link href="/politique-confidentialite" className="text-white/40 text-xs hover:text-white/70 transition-colors duration-200">Confidentialite</Link>
+              <Link
+                href="/politique-confidentialite"
+                className="text-white/40 text-xs hover:text-white/70 transition-colors duration-200"
+              >
+                Confidentialite
+              </Link>
               <span className="text-white/20">.</span>
-              <span className="text-white/40 text-xs flex items-center gap-1">Fait avec <Heart size={10} className="text-rouge inline mx-0.5" /> au Senegal</span>
+              <span className="text-white/40 text-xs flex items-center gap-1">
+                Fait avec
+                <Heart size={10} className="text-rouge inline mx-0.5" />
+                au Senegal
+              </span>
             </div>
           </div>
         </div>
       </div>
+
     </footer>
   );
 }
